@@ -52,11 +52,11 @@ std::vector<std::vector<cell>> createVector(int x, int y)
 
 class grid
 { 
-  std::vector<std::vector<cell>> allCells;
   int delta_x;
   int delta_y;
 
   public:
+    std::vector<std::vector<cell>> allCells;
     grid(int x, int y) : delta_x(x), delta_y(y), allCells(createVector(x,y)) {};
     void updateGrid();
     friend std::ostream &operator<<(std::ostream &os, grid &g);
